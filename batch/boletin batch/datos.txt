@@ -1,0 +1,5 @@
+clara:modelo 1:23456543:2003
+clara:modelo1:236543:2003
+clara2:edelo2:543454:2000
+seat:modelo:asdgadfg:2000
+aaa:sasfdgsdfg:2345:2345

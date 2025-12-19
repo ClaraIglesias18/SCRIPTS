@@ -28,8 +28,7 @@ for /f "tokens=1,2 delims=, skip=2" %%a in (%1) do (
 
 :: CREACION DE EQUIPOS DESDE FICHERO
 for /f "tokens=1,2 delims=: skip=2" %%a in (%2) do (
-
-    :habilitar
+    
     set /p habilitado="¿Desea deshabilitar el equipo? [S/N]: "
 
     if /i "!habilitado!"=="S" (
@@ -37,9 +36,6 @@ for /f "tokens=1,2 delims=: skip=2" %%a in (%2) do (
         set /a numero_equipos_des_count+=1
     ) else if /i "!habilitado!"=="N" (
         dsadd computer "cn=%%a,ou=%%b,%dominio%" -disabled no
-    ) else (
-        echo Opción no válida. Inténtelo de nuevo.
-        goto :habilitar
     )
 )
 
