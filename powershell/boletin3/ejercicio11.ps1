@@ -31,8 +31,6 @@ try {
     Write-Host "Error en la creación de objetos: $($_.Exception.Message)" -ForegroundColor Red
 }
 
----
-
 # 7. Consulta final de los elementos creados
 Write-Host "`n--- RESUMEN DE ELEMENTOS EN AD ---" -ForegroundColor Cyan
 Get-ADObject -Filter "DistinguishedName -like '*$nombreOU*'" -SearchBase $ouPath | Select-Object Name, ObjectClass, DistinguishedName | Format-Table
